@@ -24,7 +24,7 @@ export const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 mb-8">
-            "Yeah, I'm fat. I'm lazy. I SELL FENT. But at least I buy $HUBI."
+            Yeah, I'm fat. I'm lazy. I SELL FENT<br />But at least I buy $HUBI.
           </p>
           
           <div className="flex flex-wrap gap-4">
@@ -35,11 +35,11 @@ export const HeroSection = () => {
               Buy Now
             </Button>
             <Button 
-              onClick={() => smoothScroll('buy')}
+              onClick={() => smoothScroll('social')}
               variant="outline"
               className="px-8 py-3 rounded-lg glass hover-scale font-['Space_Grotesk'] font-medium border border-secondary/30"
             >
-              Where to Buy
+              Socials
             </Button>
           </div>
         </div>

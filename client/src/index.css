@@ -35,7 +35,7 @@
   }
 
   .glass {
-    @apply bg-primary/5 backdrop-blur-md border border-white/10;
+    @apply bg-primary/10 backdrop-blur-lg border border-white/20 shadow-lg;
   }
 
   .hover-scale {
@@ -47,19 +47,19 @@
   }
 
   .gradient-primary {
-    @apply bg-gradient-to-r from-primary to-secondary;
+    @apply bg-gradient-to-r from-primary via-secondary to-primary animate-gradient;
   }
 
   .gradient-accent {
-    @apply bg-gradient-to-r from-primary to-accent;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary animate-gradient;
   }
 
   .gradient-text-primary {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient;
   }
 
   .gradient-text-accent {
-    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent animate-gradient;
   }
 
   .animate-gradient {

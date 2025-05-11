@@ -19,17 +19,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div className="flex space-x-6">
-            <a href="#" className="text-white/70 hover:text-secondary transition-colors">
-              Terms
-            </a>
-            <a href="#" className="text-white/70 hover:text-secondary transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="text-white/70 hover:text-secondary transition-colors">
-              Disclaimer
-            </a>
-          </div>
+
         </div>
       </div>
     </footer>

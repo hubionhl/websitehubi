@@ -1,44 +1,8 @@
 import { useState } from "react";
-import { Copy, Check, Repeat, Cake, DollarSign } from "lucide-react";
+import { Copy, Check, ExternalLink } from "lucide-react";
 import { copyToClipboard } from "@/lib/utils";
 
-interface Exchange {
-  name: string;
-  icon: React.ReactNode;
-  description: string;
-  metric: string;
-  metricValue: string;
-  url: string;
-}
-
-const exchanges: Exchange[] = [
-  {
-    name: "Uniswap",
-    icon: <Repeat className="h-6 w-6" />,
-    description: "Decentralized exchange with deep liquidity pools",
-    metric: "Liquidity:",
-    metricValue: "$2.45M",
-    url: "https://app.uniswap.org/",
-  },
-  {
-    name: "PancakeSwap",
-    icon: <Cake className="h-6 w-6" />,
-    description: "BSC-based DEX with low transaction fees",
-    metric: "Liquidity:",
-    metricValue: "$1.85M",
-    url: "https://pancakeswap.finance/",
-  },
-  {
-    name: "Binance",
-    icon: <DollarSign className="h-6 w-6" />,
-    description: "Leading centralized exchange with high volume",
-    metric: "Volume (24h):",
-    metricValue: "$4.2M",
-    url: "https://www.binance.com/",
-  },
-];
-
-const CONTRACT_ADDRESS = "0x7e5F4552091A69125d5DfCb7b8C2659029395Bdf";
+const CONTRACT_ADDRESS = "0x8362ebff36f04056f3889e39a5a73624db16eefb";
 
 export const WhereToBySection = () => {
   const [copied, setCopied] = useState(false);
@@ -54,16 +18,16 @@ export const WhereToBySection = () => {
   return (
     <section id="buy" className="py-24 relative">
       <div className="absolute inset-0 z-0">
-        {/* A memecoin culture inspired abstract art background */}
+        {/* $HUBI background image */}
         <div
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+            backgroundImage: "url('/assets/hubi-image-1.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-30"
         />
-        <div className="absolute inset-0 bg-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -72,36 +36,38 @@ export const WhereToBySection = () => {
             <span className="gradient-text-accent">Where to Buy</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Purchase our token easily through these trusted exchanges and platforms.
+            Purchase $HUBI token quickly and securely through our official launch partner.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {exchanges.map((exchange) => (
-            <div key={exchange.name} className="glass rounded-xl p-6 hover-scale">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-['Space_Grotesk'] font-medium text-2xl">
-                  {exchange.name}
-                </h3>
-                <div className="h-12 w-12 rounded-full flex items-center justify-center gradient-primary">
-                  {exchange.icon}
+        <div className="glass rounded-xl p-8 hover-scale">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex-1">
+              <div className="flex items-center mb-4">
+                <div className="h-12 w-12 rounded-full flex items-center justify-center gradient-primary mr-4">
+                  <ExternalLink className="h-6 w-6" />
                 </div>
+                <h3 className="font-['Space_Grotesk'] font-medium text-2xl">
+                  LiquidLaunch
+                </h3>
               </div>
-              <p className="text-white/70 mb-6">{exchange.description}</p>
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-white/70">{exchange.metric}</span>
-                <span className="font-medium text-secondary">{exchange.metricValue}</span>
+              <p className="text-white/70 mb-6">The premier launchpad for innovative tokens on Base Network. Get in early with $HUBI's official launch partner.</p>
+              <div className="flex items-center mb-4">
+                <span className="text-white/70 mr-2">Total Raised:</span>
+                <span className="font-medium text-secondary">$325K</span>
               </div>
+            </div>
+            <div className="md:w-1/3">
               <a
-                href={exchange.url}
+                href="https://liquidlaunch.app/token/0x8362ebff36f04056f3889e39a5a73624db16eefb"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-3 text-center rounded-lg gradient-primary font-medium"
+                className="block w-full py-4 px-6 text-center rounded-lg gradient-primary font-medium text-lg"
               >
-                Trade Now
+                Buy on LiquidLaunch
               </a>
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="mt-16 glass rounded-xl p-8">
