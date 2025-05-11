@@ -25,9 +25,8 @@ export const WhereToBySection = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -36,7 +35,7 @@ export const WhereToBySection = () => {
             <span className="gradient-text-accent">Where to Buy</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Purchase $HUBI token quickly and securely through our official launch partner.
+            Just Buy FENT. $HUBI*
           </p>
         </div>
 
@@ -70,30 +69,7 @@ export const WhereToBySection = () => {
           </div>
         </div>
 
-        <div className="mt-16 glass rounded-xl p-8">
-          <h3 className="font-['Space_Grotesk'] font-medium text-2xl mb-4 text-center">
-            Token Contract Address
-          </h3>
-          <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg mb-4">
-            <code className="text-secondary font-mono text-sm md:text-base overflow-x-auto whitespace-nowrap">
-              {CONTRACT_ADDRESS}
-            </code>
-            <button
-              onClick={handleCopyAddress}
-              className="ml-4 text-white hover:text-secondary transition-colors"
-              aria-label="Copy contract address"
-            >
-              {copied ? (
-                <Check className="h-5 w-5" />
-              ) : (
-                <Copy className="h-5 w-5" />
-              )}
-            </button>
-          </div>
-          <p className="text-white/70 text-center">
-            Always verify the contract address before transacting
-          </p>
-        </div>
+
       </div>
     </section>
   );

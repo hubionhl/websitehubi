@@ -1,41 +1,29 @@
-import { MessageSquareLock, Twitter, MessageSquare, MessageSquareShare } from "lucide-react";
+import { MessageSquareLock, Twitter } from "lucide-react";
 
 interface SocialPlatform {
   icon: React.ReactNode;
   name: string;
   description: string;
+  handle?: string;
   buttonText: string;
   url: string;
 }
 
 const socialPlatforms: SocialPlatform[] = [
   {
+    icon: <Twitter className="h-8 w-8" />,
+    name: "Twitter (X)",
+    description: "Follow for daily updates & news",
+    handle: "@hubertliquid",
+    buttonText: "Follow Us",
+    url: "https://x.com/hubertliquid",
+  },
+  {
     icon: <MessageSquareLock className="h-8 w-8" />,
     name: "Telegram",
     description: "Join our 24/7 community chat",
     buttonText: "Join Channel",
-    url: "https://t.me/hubitoken",
-  },
-  {
-    icon: <Twitter className="h-8 w-8" />,
-    name: "Twitter",
-    description: "Follow for daily updates & news",
-    buttonText: "Follow Us",
-    url: "https://twitter.com/hubitoken",
-  },
-  {
-    icon: <MessageSquare className="h-8 w-8" />,
-    name: "Discord",
-    description: "Join our developer community",
-    buttonText: "Join Server",
-    url: "https://discord.gg/hubitoken",
-  },
-  {
-    icon: <MessageSquareShare className="h-8 w-8" />,
-    name: "Reddit",
-    description: "Join discussions & share ideas",
-    buttonText: "Join Subreddit",
-    url: "https://reddit.com/r/hubitoken",
+    url: "https://t.me/+7hAhbUfBwnlhMmY0",
   },
 ];
 
@@ -61,30 +49,35 @@ export const SocialSection = () => {
             <span className="gradient-text-primary">Join the $HUBI Community</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Connect with over 50,000 $HUBI holders and stay updated with the latest token developments and announcements.
+            Connect with $HUBI holders and stay updated with the latest token developments.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {socialPlatforms.map((platform) => (
-            <div key={platform.name} className="glass rounded-xl p-6 hover-scale">
-              <div className="social-icon h-16 w-16 rounded-full flex items-center justify-center gradient-primary mb-6 mx-auto">
-                {platform.icon}
+            <div key={platform.name} className="glass rounded-xl p-8 hover-scale">
+              <div className="flex flex-col items-center">
+                <div className="social-icon h-20 w-20 rounded-full flex items-center justify-center gradient-primary mb-6">
+                  {platform.icon}
+                </div>
+                <h3 className="font-['Space_Grotesk'] font-medium text-2xl text-center mb-2">
+                  {platform.name}
+                </h3>
+                {platform.handle && (
+                  <div className="text-secondary font-mono text-lg mb-3">{platform.handle}</div>
+                )}
+                <p className="text-white/70 text-center mb-6">
+                  {platform.description}
+                </p>
+                <a
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 text-center rounded-lg gradient-primary font-medium text-lg"
+                >
+                  {platform.buttonText}
+                </a>
               </div>
-              <h3 className="font-['Space_Grotesk'] font-medium text-xl text-center mb-2">
-                {platform.name}
-              </h3>
-              <p className="text-white/70 text-center mb-4">
-                {platform.description}
-              </p>
-              <a
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 text-center rounded-lg gradient-primary font-medium"
-              >
-                {platform.buttonText}
-              </a>
             </div>
           ))}
         </div>
