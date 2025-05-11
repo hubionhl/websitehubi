@@ -55,10 +55,10 @@ export const WhereToBySection = () => {
                   LiquidLaunch
                 </h3>
               </div>
-              <p className="text-white/70 mb-6">Official Fent warehouse and distributor, get your share now.</p>
+              <p className="text-white/70 mb-6">The premier launchpad for innovative tokens on Base Network. Get in early with $HUBI's official launch partner.</p>
               <div className="flex items-center mb-4">
-                <span className="text-white/70 mr-2">Lets bond this to have more money for Fent</span>
-                <span className="font-medium text-secondary"></span>
+                <span className="text-white/70 mr-2">Total Raised:</span>
+                <span className="font-medium text-secondary">$325K</span>
               </div>
             </div>
             <div className="md:w-1/3 relative">
