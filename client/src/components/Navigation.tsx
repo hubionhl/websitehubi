@@ -30,6 +30,11 @@ export const Navigation = () => {
     <nav className="fixed w-full z-50 glass">
       <div className="container mx-auto px-6">
         <div className="flex justify-center items-center py-4">
+          <img 
+            src="/assets/hubi-logo.jpeg" 
+            alt="$HUBI Logo" 
+            className="h-8 w-8 mr-2 rounded-full" 
+          />
           <span className="text-4xl font-bold font-['Space_Grotesk'] gradient-text-primary">
             $HUBI
           </span>

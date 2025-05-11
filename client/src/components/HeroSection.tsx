@@ -20,10 +20,10 @@ export const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <h1 className="font-['Space_Grotesk'] font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-            <span className="gradient-text-primary">Official $HUBI Token</span>
+            <span className="gradient-text-primary text-shadow-lg">Official $HUBI Token</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/80 mb-8">
+          <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg mb-8 bg-background/30 p-4 rounded-lg">
             Yeah, I'm fat. I'm lazy. I SELL FENT<br />But at least I buy $HUBI.
           </p>
           
@@ -45,9 +45,16 @@ export const HeroSection = () => {
         </div>
       </div>
       
-      {/* Glass-morphic floating elements */}
+      {/* Glass-morphic floating elements & Happy Hubi */}
       <div className="absolute bottom-10 right-10 w-24 h-24 rounded-full glass opacity-50 animate-pulse hidden md:block" />
       <div className="absolute top-32 right-24 w-16 h-16 rounded-full glass opacity-40 animate-pulse hidden md:block" />
+      <div className="absolute top-60 right-10 w-32 h-32 md:w-48 md:h-48 hidden md:block">
+        <img 
+          src="/assets/hubi-happy.jpeg" 
+          alt="Happy Hubi" 
+          className="w-full h-full object-cover rounded-full border-4 border-secondary hover-scale"
+        />
+      </div>
     </section>
   );
 };

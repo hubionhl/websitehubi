@@ -25,8 +25,9 @@ export const WhereToBySection = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="absolute inset-0 opacity-100"
+          className="absolute inset-0 opacity-90"
         />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -56,7 +57,14 @@ export const WhereToBySection = () => {
                 <span className="font-medium text-secondary">$325K</span>
               </div>
             </div>
-            <div className="md:w-1/3">
+            <div className="md:w-1/3 relative">
+              <div className="absolute -top-16 -right-10 w-20 h-20 hidden md:block">
+                <img
+                  src="/assets/hubi-happy.jpeg"
+                  alt="Happy Hubi"
+                  className="w-full h-full object-cover rounded-full border-2 border-secondary rotate-12"
+                />
+              </div>
               <a
                 href="https://liquidlaunch.app/token/0x8362ebff36f04056f3889e39a5a73624db16eefb"
                 target="_blank"

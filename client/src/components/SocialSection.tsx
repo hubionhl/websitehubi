@@ -12,8 +12,8 @@ interface SocialPlatform {
 const socialPlatforms: SocialPlatform[] = [
   {
     icon: <Twitter className="h-8 w-8" />,
-    name: "Twitter (X)",
-    description: "Follow for daily updates & news",
+    name: "",
+    description: "Just follow Bozzo",
     handle: "@hubertliquid",
     buttonText: "Follow Us",
     url: "https://x.com/hubertliquid",
@@ -21,7 +21,7 @@ const socialPlatforms: SocialPlatform[] = [
   {
     icon: <MessageSquareLock className="h-8 w-8" />,
     name: "Telegram",
-    description: "Join our 24/7 community chat",
+    description: "Join FentHouse",
     buttonText: "Join Channel",
     url: "https://t.me/+7hAhbUfBwnlhMmY0",
   },
@@ -46,10 +46,10 @@ export const SocialSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-4">
-            <span className="gradient-text-primary">Join the $HUBI Community</span>
+            <span className="gradient-text-primary">Join the CRACK House</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Connect with $HUBI holders and stay updated with the latest token developments.
+            Connect with other Addicts. $HUBI 
           </p>
         </div>
 
