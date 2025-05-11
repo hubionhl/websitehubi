@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, Check, ExternalLink } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { copyToClipboard } from "@/lib/utils";
 
 const CONTRACT_ADDRESS = "0x8362ebff36f04056f3889e39a5a73624db16eefb";
@@ -33,9 +33,9 @@ export const WhereToBySection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-4">
-            <span className="gradient-text-accent">Where to Buy</span>
+            <span className="text-white">Where to Buy</span>
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">
+          <p className="text-white max-w-2xl mx-auto text-xl font-medium">
             Just Buy FENT. $HUBI*
           </p>
         </div>
@@ -44,8 +44,12 @@ export const WhereToBySection = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex-1">
               <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full flex items-center justify-center gradient-primary mr-4">
-                  <ExternalLink className="h-6 w-6" />
+                <div className="h-14 w-14 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                  <img 
+                    src="/assets/liquidlaunch-logo.png" 
+                    alt="LiquidLaunch Logo" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-['Space_Grotesk'] font-medium text-2xl">
                   LiquidLaunch

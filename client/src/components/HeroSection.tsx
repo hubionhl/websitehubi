@@ -20,10 +20,10 @@ export const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <h1 className="font-['Space_Grotesk'] font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-            <span className="gradient-text-primary text-shadow-lg">Official $HUBI Token</span>
+            <span className="text-white text-shadow-lg">Official $HUBI Token</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg mb-8 bg-background/30 p-4 rounded-lg">
+          <p className="text-xl md:text-2xl text-white font-semibold mb-8 bg-background/50 p-4 rounded-lg">
             Yeah, I'm fat. I'm lazy. I SELL FENT<br />But at least I buy $HUBI.
           </p>
           
