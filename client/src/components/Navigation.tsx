@@ -31,8 +31,13 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center py-4">
           <a href="#" className="flex items-center">
+            <img 
+              src="/assets/hubi-logo.jpeg" 
+              alt="$HUBI Logo" 
+              className="h-8 w-8 mr-2 rounded-full" 
+            />
             <span className="text-2xl font-bold font-['Space_Grotesk'] gradient-text-primary">
-              CryptoHub
+              $HUBI
             </span>
           </a>
 

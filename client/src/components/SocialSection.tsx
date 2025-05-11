@@ -11,31 +11,31 @@ interface SocialPlatform {
 const socialPlatforms: SocialPlatform[] = [
   {
     icon: <MessageSquareLock className="h-8 w-8" />,
-    name: "MessageSquareLock",
+    name: "Telegram",
     description: "Join our 24/7 community chat",
     buttonText: "Join Channel",
-    url: "https://t.me/cryptohub",
+    url: "https://t.me/hubitoken",
   },
   {
     icon: <Twitter className="h-8 w-8" />,
     name: "Twitter",
     description: "Follow for daily updates & news",
     buttonText: "Follow Us",
-    url: "https://twitter.com/cryptohub",
+    url: "https://twitter.com/hubitoken",
   },
   {
     icon: <MessageSquare className="h-8 w-8" />,
     name: "Discord",
     description: "Join our developer community",
     buttonText: "Join Server",
-    url: "https://discord.gg/cryptohub",
+    url: "https://discord.gg/hubitoken",
   },
   {
     icon: <MessageSquareShare className="h-8 w-8" />,
-    name: "MessageSquareShare",
+    name: "Reddit",
     description: "Join discussions & share ideas",
     buttonText: "Join Subreddit",
-    url: "https://reddit.com/r/cryptohub",
+    url: "https://reddit.com/r/hubitoken",
   },
 ];
 
@@ -58,10 +58,10 @@ export const SocialSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-4">
-            <span className="gradient-text-primary">Connect With Us</span>
+            <span className="gradient-text-primary">Join the $HUBI Community</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Join our thriving community across multiple platforms to stay updated with the latest news and announcements.
+            Connect with over 50,000 $HUBI holders and stay updated with the latest token developments and announcements.
           </p>
         </div>
 

@@ -5,12 +5,17 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
             <a href="#" className="flex items-center">
+              <img 
+                src="/assets/hubi-logo.jpeg" 
+                alt="$HUBI Logo" 
+                className="h-8 w-8 mr-2 rounded-full" 
+              />
               <span className="text-2xl font-bold font-['Space_Grotesk'] gradient-text-primary">
-                CryptoHub
+                $HUBI
               </span>
             </a>
             <p className="text-white/50 mt-2">
-              &copy; {new Date().getFullYear()} CryptoHub. All rights reserved.
+              &copy; {new Date().getFullYear()} $HUBI. All rights reserved.
             </p>
           </div>
 

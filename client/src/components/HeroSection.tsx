@@ -4,37 +4,35 @@ import { smoothScroll } from "@/lib/utils";
 export const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-24 pb-16 relative overflow-hidden">
-      {/* Abstract blockchain background elements */}
+      {/* $HUBI background image */}
       <div className="absolute inset-0 z-0">
         <div 
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+            backgroundImage: "url('/assets/hubi-image-1.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center"
           }} 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/30 to-background/60" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <h1 className="font-['Space_Grotesk'] font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-            <span className="gradient-text-primary">Your Crypto</span>
-            <br />
-            <span className="gradient-text-accent">Social Hub</span>
+            <span className="gradient-text-primary">Official $HUBI Token</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 mb-8">
-            A central platform for all your crypto presence needs, connecting your community across the digital landscape.
+            "Yeah, I'm fat. I'm lazy. I SELL FENT. But at least I buy $HUBI."
           </p>
           
           <div className="flex flex-wrap gap-4">
             <Button 
-              onClick={() => smoothScroll('social')}
+              onClick={() => window.open("https://liquidlaunch.app/token/0x8362ebff36f04056f3889e39a5a73624db16eefb", "_blank")}
               className="px-8 py-3 rounded-lg gradient-primary hover-scale font-['Space_Grotesk'] font-medium"
             >
-              Explore Social
+              Buy Now
             </Button>
             <Button 
               onClick={() => smoothScroll('buy')}
