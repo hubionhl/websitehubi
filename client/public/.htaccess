@@ -1,0 +1,55 @@
+# Enable rewriting
+RewriteEngine On
+
+# If the request is not for a file or directory, send to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [QSA,L]
+
+# Set MIME types
+<IfModule mod_mime.c>
+  # JavaScript
+  AddType application/javascript js
+  AddType application/json json
+  
+  # CSS
+  AddType text/css css
+  
+  # Images
+  AddType image/svg+xml svg svgz
+  AddEncoding gzip svgz
+  
+  # Fonts
+  AddType font/ttf ttf
+  AddType font/otf otf
+  AddType font/woff woff
+  AddType font/woff2 woff2
+  AddType application/vnd.ms-fontobject eot
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
