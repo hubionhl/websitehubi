@@ -29,7 +29,7 @@ const socialPlatforms: SocialPlatform[] = [
 
 export const SocialSection = () => {
   return (
-    <section id="social" className="py-40 relative">
+    <section id="social" className="py-60 relative">
       <div className="absolute inset-0 z-0">
         {/* Blurred background version (stretched) */}
         <div

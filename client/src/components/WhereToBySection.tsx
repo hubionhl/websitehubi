@@ -16,7 +16,7 @@ export const WhereToBySection = () => {
   };
 
   return (
-    <section id="buy" className="py-24 relative">
+    <section id="buy" className="py-60 relative">
       <div className="absolute inset-0 z-0">
         {/* $HUBI background image */}
       <div
@@ -48,9 +48,10 @@ export const WhereToBySection = () => {
         <div
           style={{
             backgroundImage: "url('/assets/hubi-friends.jpeg')",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            backgroundPosition: "top center",
+            transform: "scale(0.99)",
           }}
           className="absolute inset-0 opacity-100"
         />
