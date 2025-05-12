@@ -12,38 +12,19 @@ export const WhereToBySection = () => {
     if (success) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    }
+``    }
   };
 
   return (
     <section id="buy" className="py-60 relative">
       <div className="absolute inset-0 z-0">
         {/* $HUBI background image */}
-      <div
-          style={{
-            backgroundImage: "url('/assets/hubi-friends.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(8px)",
-            transform: "scale(1.1)", // a bit zoomed so blur doesn't leave edges
-          }}
-          className="absolute inset-0 opacity-60"
-        />
-        {/* Feather gradient to blend sharp and blurred background smoothly */}
         <div
-          className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8))",
-            zIndex: 5,
+            backgroundColor: "#050f12"
           }}
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-[15]"
-          style={{
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(24,24,24,1) 100%)",
-          }}
-        />
-
+          className="absolute inset-0"
+            />
         {/* Focused foreground image (not blurred, smaller, centered) */}
         <div
           style={{

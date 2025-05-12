@@ -29,57 +29,37 @@ const socialPlatforms: SocialPlatform[] = [
 
 export const SocialSection = () => {
   return (
-    <section id="social" className="py-60 relative">
-      <div className="absolute inset-0 z-0">
-        {/* Blurred background version (stretched) */}
-        <div
-          style={{
-            backgroundImage: "url('/assets/hubi-moon.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(8px)",
-            transform: "scale(1.1)", // a bit zoomed so blur doesn't leave edges
-          }}
-          className="absolute inset-0 opacity-60"
-        />
-        {/* Feather gradient to blend sharp and blurred background smoothly */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8))",
-            zIndex: 5,
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-[15]"
-          style={{
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(24,24,24,1) 100%)",
-          }}
-        />
+    <section id="social" className="relative py-32 min-h-[850px]">
+      {/* Background color */}
+      <div className="absolute inset-0 bg-[#050e14] z-0" />
 
-        {/* Focused foreground image (not blurred, smaller, centered) */}
-        <div
-          style={{
-            backgroundImage: "url('/assets/hubi-moon.jpeg')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-          className="absolute inset-0 opacity-100"
-        />
+      {/* Foreground image centered but not stretching */}
+      <div
+        style={{
+          backgroundImage: "url('/assets/hubi-moon.jpeg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "top center",
+        }}
+        className="absolute inset-0 z-10 opacity-100"
+      />
 
-        {/* Optional overlay to darken the scene slightly */}
-        <div className="absolute inset-0 bg-background/30" />
-      </div>
+      {/* Feather bottom gradient for smooth transition */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32 z-20 pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(5,15,18,1) 100%)",
+        }}
+      />
 
-
-      <div className="container mx-auto px-6 relative z-10">
+      {/* Content */}
+      <div className="container mx-auto px-6 relative z-30 pt-40 pb-20">
         <div className="text-center mb-16">
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-4">
             <span className="gradient-text-primary">Join the CRACK House</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Connect with other Addicts. $HUBI 
+            Connect with other Addicts. $HUBI
           </p>
         </div>
 
@@ -96,9 +76,7 @@ export const SocialSection = () => {
                 {platform.handle && (
                   <div className="text-secondary font-mono text-lg mb-3">{platform.handle}</div>
                 )}
-                <p className="text-white/70 text-center mb-6">
-                  {platform.description}
-                </p>
+                <p className="text-white/70 text-center mb-6">{platform.description}</p>
                 <a
                   href={platform.url}
                   target="_blank"
@@ -113,5 +91,6 @@ export const SocialSection = () => {
         </div>
       </div>
     </section>
+
   );
 };
