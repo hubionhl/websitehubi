@@ -19,15 +19,44 @@ export const WhereToBySection = () => {
     <section id="buy" className="py-24 relative">
       <div className="absolute inset-0 z-0">
         {/* $HUBI background image */}
-        <div
+      <div
           style={{
-            backgroundImage: "url('/assets/hubi-image-1.jpeg')",
+            backgroundImage: "url('/assets/hubi-friends.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            filter: "blur(8px)",
+            transform: "scale(1.1)", // a bit zoomed so blur doesn't leave edges
           }}
-          className="absolute inset-0 opacity-90"
+          className="absolute inset-0 opacity-60"
         />
-        <div className="absolute inset-0 bg-background/40" />
+        {/* Feather gradient to blend sharp and blurred background smoothly */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8))",
+            zIndex: 5,
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-[15]"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(24,24,24,1) 100%)",
+          }}
+        />
+
+        {/* Focused foreground image (not blurred, smaller, centered) */}
+        <div
+          style={{
+            backgroundImage: "url('/assets/hubi-friends.jpeg')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+          className="absolute inset-0 opacity-100"
+        />
+
+        {/* Optional overlay to darken the scene slightly */}
+        <div className="absolute inset-0 bg-background/30" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -36,7 +65,7 @@ export const WhereToBySection = () => {
             <span className="text-white">Where to Buy</span>
           </h2>
           <p className="text-white max-w-2xl mx-auto text-xl font-medium">
-            Just Buy FENT. $HUBI*
+            Just Buy FENT. <br/> $HUBI*
           </p>
         </div>
 
@@ -55,20 +84,20 @@ export const WhereToBySection = () => {
                   LiquidLaunch
                 </h3>
               </div>
-              <p className="text-white/70 mb-6">The premier launchpad for innovative tokens on Base Network. Get in early with $HUBI's official launch partner.</p>
+              <p className="text-white/70 mb-6">The official FENT warehouse and marketplace <br/> Get your share now</p>
               <div className="flex items-center mb-4">
-                <span className="text-white/70 mr-2">Total Raised:</span>
-                <span className="font-medium text-secondary">$325K</span>
+                {/*<span className="text-white/70 mr-2">Total Raised:</span>
+                <span className="font-medium text-secondary">$325K</span>*/}
               </div>
             </div>
             <div className="md:w-1/3 relative">
-              <div className="absolute -top-16 -right-10 w-20 h-20 hidden md:block">
+              {<div className="absolute -top-16 -right-10 w-20 h-20 hidden md:block">
                 <img
                   src="/assets/hubi-happy.jpeg"
                   alt="Happy Hubi"
                   className="w-full h-full object-cover rounded-full border-2 border-secondary rotate-12"
                 />
-              </div>
+              </div>}
               <a
                 href="https://liquidlaunch.app/token/0x8362ebff36f04056f3889e39a5a73624db16eefb"
                 target="_blank"

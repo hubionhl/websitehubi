@@ -29,19 +29,49 @@ const socialPlatforms: SocialPlatform[] = [
 
 export const SocialSection = () => {
   return (
-    <section id="social" className="py-24 relative">
+    <section id="social" className="py-40 relative">
       <div className="absolute inset-0 z-0">
-        {/* An abstract crypto-themed background with digital patterns */}
+        {/* Blurred background version (stretched) */}
         <div
           style={{
-            backgroundImage: "url('https://pixabay.com/get/g985ed2f40153d155e23edca3b75b1588803d0e3451a7184004712e24407c862f0141e6ed28f5d6f7eb965873a645fb181495ecac79245b1ee7660ca0cc66f4eb_1280.jpg')",
+            backgroundImage: "url('/assets/hubi-moon.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            filter: "blur(8px)",
+            transform: "scale(1.1)", // a bit zoomed so blur doesn't leave edges
           }}
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-60"
         />
-        <div className="absolute inset-0 bg-background/90" />
+        {/* Feather gradient to blend sharp and blurred background smoothly */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8))",
+            zIndex: 5,
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-[15]"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(24,24,24,1) 100%)",
+          }}
+        />
+
+        {/* Focused foreground image (not blurred, smaller, centered) */}
+        <div
+          style={{
+            backgroundImage: "url('/assets/hubi-moon.jpeg')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+          className="absolute inset-0 opacity-100"
+        />
+
+        {/* Optional overlay to darken the scene slightly */}
+        <div className="absolute inset-0 bg-background/30" />
       </div>
+
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
